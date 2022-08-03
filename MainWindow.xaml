@@ -42,7 +42,7 @@
         <Button x:Name="AddGame" Grid.Column="4" Grid.Row="1" Content="{x:Static p:Resources.add_game}" Padding="10,10,10,10" Margin="0,0,0,10" Click="AddGame_Click"/>
         <Button x:Name="RemoveGame" Grid.Column="4" Grid.Row="2" Content="{x:Static p:Resources.remove_game}" Padding="10,10,10,10" Margin="0,0,0,10" Click="RemoveGame_Click"/>
         <Button x:Name="RestoreSelectedGame" Grid.Column="4" Grid.Row="6" Content="{x:Static p:Resources.restore}" Padding="10,10,10,10" Margin="0,10,0,0" Click="RestoreSelectedGame_Click"/>
-        <Button x:Name="RestoreAll" Grid.Column="4" Grid.Row="8" Content="{x:Static p:Resources.restore_all}" Padding="10,10,10,10" Margin="0,10,0,0" FontSize="15" Click="RestoreAll_Click"/>
+        <Button x:Name="RestoreAll" Grid.Column="4" Grid.Row="8" Content="{x:Static p:Resources.restore_all}" Padding="10,10,10,10" Margin="0,10,0,0"  Click="RestoreAll_Click"/>
         <Button x:Name="BackupSelectedGame" Grid.Column="4" Grid.Row="5" Content="{x:Static p:Resources.backup}" Padding="10,10,10,10" Click="BackupSelectedGame_Click"/>
         <Button x:Name="BackupAll" Grid.Column="4" Grid.Row="7" Content="{x:Static p:Resources.backup_all}" Padding="10,10,10,10" Margin="0,10,0,0" Click="BackupAll_Click" />
 
