@@ -1,0 +1,77 @@
+﻿<Window x:Class="SavesManager.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local = "clr-namespace:SavesManager" 
+        xmlns:p = "clr-namespace:SavesManager.Properties"
+        mc:Ignorable="d" FontSize="18"
+        WindowStartupLocation="CenterScreen"
+        Title="{x:Static p:Resources.saves_manager}" Height="750" Width="700" FontFamily="Segoe UI Light" Closing="Window_Closing">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="50" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="20" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+
+            <RowDefinition Height="20" />
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="{x:Static p:Resources.saves_manager}" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="3" FontSize="28"></TextBlock>
+
+        <Button x:Name="SortGames_UI" Grid.Column="4" Grid.Row="3" Content="{x:Static p:Resources.sort_games}" Padding="10,10,10,10" Margin="0,0,0,10" Click="SortGames_UI_Click"/>
+
+        <Button x:Name="AddGame" Grid.Column="4" Grid.Row="1" Content="{x:Static p:Resources.add_game}" Padding="10,10,10,10" Margin="0,0,0,10" Click="AddGame_Click"/>
+        <Button x:Name="RemoveGame" Grid.Column="4" Grid.Row="2" Content="{x:Static p:Resources.remove_game}" Padding="10,10,10,10" Margin="0,0,0,10" Click="RemoveGame_Click"/>
+        <Button x:Name="RestoreSelectedGame" Grid.Column="4" Grid.Row="6" Content="{x:Static p:Resources.restore}" Padding="10,10,10,10" Margin="0,10,0,0" Click="RestoreSelectedGame_Click"/>
+        <Button x:Name="RestoreAll" Grid.Column="4" Grid.Row="8" Content="{x:Static p:Resources.restore_all}" Padding="10,10,10,10" Margin="0,10,0,0" FontSize="15" Click="RestoreAll_Click"/>
+        <Button x:Name="BackupSelectedGame" Grid.Column="4" Grid.Row="5" Content="{x:Static p:Resources.backup}" Padding="10,10,10,10" Click="BackupSelectedGame_Click"/>
+        <Button x:Name="BackupAll" Grid.Column="4" Grid.Row="7" Content="{x:Static p:Resources.backup_all}" Padding="10,10,10,10" Margin="0,10,0,0" Click="BackupAll_Click" />
+
+        <TextBlock Text="{x:Static p:Resources.saves_path}" x:Name="SavesPath_UI" Grid.Column="1" Grid.Row="9" Margin="0,10,10,0" FontSize="14" VerticalAlignment="Center" Height="19" ></TextBlock>
+
+        <TextBox x:Name="SelectedPath_UI" VerticalAlignment="Bottom" Grid.Column="2" Grid.Row="9" Margin="0,10,10,0" TextChanged="SelectedPath_UI_TextChanged"/>
+
+        <TextBlock Text="{x:Static p:Resources.about}" x:Name="About_UI" Grid.Column="4" Grid.Row="9"  VerticalAlignment="Bottom" FontSize="14" HorizontalAlignment="Center" MouseDown="About_UI_MouseDown"></TextBlock>
+
+        <TextBlock x:Name="SavedText_UI" Margin="0,10,0,0" Grid.Column="1" Grid.Row="10" Grid.ColumnSpan="4"  VerticalAlignment="Bottom" FontSize="14" ></TextBlock>
+
+        <Button x:Name="SelectPath_UI" Grid.Column="3" Grid.Row="9" Margin="0,10,10,0" Content="..." Height="28" VerticalAlignment="Bottom" Click="SelectPath_UI_Click" />
+
+        <ListBox Name="GamesList_UI" HorizontalContentAlignment="Stretch" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="3" Grid.RowSpan="7" Margin="0,0,10,0">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid Margin="0,2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="50" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="auto" />
+                        </Grid.ColumnDefinitions>
+                        <Image Source="{Binding gameImage}" Grid.Column="0"></Image>
+                        <TextBlock Text="{Binding gameName}" Grid.Column="1" VerticalAlignment="Center" Margin="15, 0, 0, 0"></TextBlock>
+                        <TextBlock Text="{Binding dateTime}" Grid.Column="3" VerticalAlignment="Center"></TextBlock>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+    </Grid>
+</Window>
