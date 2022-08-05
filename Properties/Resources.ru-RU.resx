@@ -191,6 +191,9 @@
   <data name="no_save_folder" xml:space="preserve">
     <value>Папка с сэйвами не найдена.</value>
   </data>
+  <data name="open_saves_folder" xml:space="preserve">
+    <value>Открыть папку с сохранениями</value>
+  </data>
   <data name="remove_game" xml:space="preserve">
     <value>Удалить игру</value>
   </data>

@@ -290,6 +290,15 @@ namespace SavesManager.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Open saves folder.
+        /// </summary>
+        public static string open_saves_folder {
+            get {
+                return ResourceManager.GetString("open_saves_folder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Remove game.
         /// </summary>
         public static string remove_game {

@@ -57,8 +57,10 @@
         <Button x:Name="SelectPath_UI" Grid.Column="3" Grid.Row="9" Margin="0,10,10,0" Content="..." Height="28" VerticalAlignment="Bottom" Click="SelectPath_UI_Click" />
 
         <ListBox Name="GamesList_UI" HorizontalContentAlignment="Stretch" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="3" Grid.RowSpan="7" Margin="0,0,10,0">
+
             <ListBox.ItemTemplate>
                 <DataTemplate>
+
                     <Grid Margin="0,2">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="50" />
@@ -69,8 +71,16 @@
                         <TextBlock Text="{Binding gameName}" Grid.Column="1" VerticalAlignment="Center" Margin="15, 0, 0, 0"></TextBlock>
                         <TextBlock Text="{Binding dateTime}" Grid.Column="3" VerticalAlignment="Center"></TextBlock>
                     </Grid>
+
                 </DataTemplate>
             </ListBox.ItemTemplate>
+
+            <ListBox.ContextMenu>
+                <ContextMenu>
+                    <MenuItem x:Name="OpenFolderMenu" Header="{x:Static p:Resources.open_saves_folder}" Click="OpenFolderMenu_Click"/>
+                </ContextMenu>
+            </ListBox.ContextMenu>
+
         </ListBox>
 
     </Grid>

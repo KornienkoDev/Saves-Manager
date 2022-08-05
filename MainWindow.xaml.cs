@@ -357,5 +357,18 @@ namespace SavesManager
             _about_game_window.ShowDialog();
         }
 
+        private void OpenFolderMenu_Click(object sender, RoutedEventArgs e)
+        {
+            Game selectedGame = Game.games[GamesList_UI.SelectedIndex];
+            String selectedGamePath = selectedGame.gamePath;
+            if (Directory.Exists(selectedGame.gamePath)) {
+                Process.Start(selectedGamePath);
+            }
+            else
+            {
+                UpdateInfo(no_save_folder);
+            }
+            
+        }
     }
 }
