@@ -9,9 +9,7 @@ using Microsoft.WindowsAPICodePack.Dialogs;
 
 namespace SavesManager
 {
-    /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
-    /// </summary>
+
     public partial class MainWindow : Window
     {
         public string dataStorage = "storage.dat";
