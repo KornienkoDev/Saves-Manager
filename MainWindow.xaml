@@ -78,6 +78,7 @@
             <ListBox.ContextMenu>
                 <ContextMenu>
                     <MenuItem x:Name="OpenFolderMenu" Header="{x:Static p:Resources.open_saves_folder}" Click="OpenFolderMenu_Click"/>
+                    <MenuItem x:Name="EditRecordMenu" Header="{x:Static p:Resources.edit_menu}" Click="EditRecordMenu_Click" />
                 </ContextMenu>
             </ListBox.ContextMenu>
 

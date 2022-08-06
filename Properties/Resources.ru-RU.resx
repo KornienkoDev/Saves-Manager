@@ -161,6 +161,12 @@
   <data name="doYouWantToRestore" xml:space="preserve">
     <value>Вы действительно хотите восстановить ВСЕ сейвы? (только новые файлы будут перезаписаны)</value>
   </data>
+  <data name="edit_menu" xml:space="preserve">
+    <value>Редактировать</value>
+  </data>
+  <data name="edit_window_name" xml:space="preserve">
+    <value>Редактировать игру</value>
+  </data>
   <data name="empty_game_list" xml:space="preserve">
     <value>Список игр пуст.</value>
   </data>

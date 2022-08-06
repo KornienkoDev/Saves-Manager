@@ -191,6 +191,24 @@ namespace SavesManager.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Edit.
+        /// </summary>
+        public static string edit_menu {
+            get {
+                return ResourceManager.GetString("edit_menu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Edit game.
+        /// </summary>
+        public static string edit_window_name {
+            get {
+                return ResourceManager.GetString("edit_window_name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Empty game list..
         /// </summary>
         public static string empty_game_list {

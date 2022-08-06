@@ -370,5 +370,18 @@ namespace SavesManager
             }
             
         }
+
+        private void EditRecordMenu_Click(object sender, RoutedEventArgs e)
+        {
+            EditGame _edit_game_window = new EditGame()
+            {
+                ResizeMode = ResizeMode.NoResize,
+                ShowInTaskbar = false,
+                Owner = this
+
+            };
+            _edit_game_window.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            _edit_game_window.ShowDialog();
+        }
     }
 }
