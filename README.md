@@ -1,4 +1,4 @@
-# Saves Manager v1.3
+# Saves Manager v1.4
 
 This program is for backup and restoring saves files from the games. It is designed for those who often reinstall Windows and get tired of manually backing up all the saves or losing them. All info about your games is stored in "storage.dat".
 
