@@ -121,7 +121,7 @@
     <value>О программе</value>
   </data>
   <data name="about_text" xml:space="preserve">
-    <value>Данная программа сохраняет и восстанавливает сейвы из игр. Придназначена для тех, кто часто переустанавливает Windows и ему надоело бэкапить вручную все сейвы или терять их. Информация о играх хранится в "storage.dat" можете изменить его любым текстовым редактором если вдруг у вас поменяются пути.
+    <value>Данная программа сохраняет и восстанавливает сейвы из игр. Придназначена для тех, кто часто переустанавливает Windows и ему надоело бэкапить вручную все сейвы или терять их. Информация о играх хранится в "storage.dat".
 
 © 2022. Kornienko Dev</value>
   </data>
@@ -162,7 +162,7 @@
     <value>Вы действительно хотите восстановить ВСЕ сейвы? (только новые файлы будут перезаписаны)</value>
   </data>
   <data name="edit_menu" xml:space="preserve">
-    <value>Редактировать</value>
+    <value>Редактировать выбранную игру</value>
   </data>
   <data name="edit_window_name" xml:space="preserve">
     <value>Редактировать игру</value>
@@ -214,6 +214,9 @@
   </data>
   <data name="saves_path" xml:space="preserve">
     <value>Путь к сохранениям:</value>
+  </data>
+  <data name="save_changes" xml:space="preserve">
+    <value>Сохранить изменения</value>
   </data>
   <data name="sorted" xml:space="preserve">
     <value>Список игр был отсортирован.</value>

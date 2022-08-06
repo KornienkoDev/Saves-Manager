@@ -70,7 +70,7 @@ namespace SavesManager.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на This program is for backup and restoring saves files from the games. It is designed for those who often reinstall Windows and get tired of manually backing up all the saves or losing them. All info about your games is stored in &quot;storage.dat&quot;. Feel free to edit this file in case some of your paths has been changed.
+        ///   Ищет локализованную строку, похожую на This program is for backup and restoring saves files from the games. It is designed for those who often reinstall Windows and get tired of manually backing up all the saves or losing them. All info about your games is stored in &quot;storage.dat&quot;.
         ///
         ///© 2022. Kornienko Dev.
         /// </summary>
@@ -191,7 +191,7 @@ namespace SavesManager.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Edit.
+        ///   Ищет локализованную строку, похожую на Edit selected game.
         /// </summary>
         public static string edit_menu {
             get {
@@ -340,6 +340,15 @@ namespace SavesManager.Properties {
         public static string restore_all {
             get {
                 return ResourceManager.GetString("restore_all", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Save changes.
+        /// </summary>
+        public static string save_changes {
+            get {
+                return ResourceManager.GetString("save_changes", resourceCulture);
             }
         }
         

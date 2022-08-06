@@ -6,7 +6,7 @@
         xmlns:p = "clr-namespace:SavesManager.Properties"
         xmlns:local="clr-namespace:SavesManager"
         mc:Ignorable="d"
-        Title="{x:Static p:Resources.about}" Height="320" Width="280">
+        Title="{x:Static p:Resources.about}" Height="260" Width="280">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="10"></ColumnDefinition>

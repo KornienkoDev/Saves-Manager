@@ -121,7 +121,7 @@
     <value>About</value>
   </data>
   <data name="about_text" xml:space="preserve">
-    <value>This program is for backup and restoring saves files from the games. It is designed for those who often reinstall Windows and get tired of manually backing up all the saves or losing them. All info about your games is stored in "storage.dat". Feel free to edit this file in case some of your paths has been changed.
+    <value>This program is for backup and restoring saves files from the games. It is designed for those who often reinstall Windows and get tired of manually backing up all the saves or losing them. All info about your games is stored in "storage.dat".
 
 © 2022. Kornienko Dev</value>
   </data>
@@ -164,7 +164,7 @@
 (only the new files will be overwritten)</value>
   </data>
   <data name="edit_menu" xml:space="preserve">
-    <value>Edit</value>
+    <value>Edit selected game</value>
   </data>
   <data name="edit_window_name" xml:space="preserve">
     <value>Edit game</value>
@@ -219,6 +219,9 @@
   </data>
   <data name="saves_path" xml:space="preserve">
     <value>Saves path:</value>
+  </data>
+  <data name="save_changes" xml:space="preserve">
+    <value>Save changes</value>
   </data>
   <data name="sorted" xml:space="preserve">
     <value>List has been sorted.</value>
