@@ -4,6 +4,6 @@ namespace GamesSaver
 {
     public partial class App : Application
     {
-        
+
     }
 }

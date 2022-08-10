@@ -18,7 +18,7 @@ namespace SavesManager
             this.gameName = gameName;
             this.gamePath = gamePath;
             this.dateTime = dateTime;
-            
+
 
             if (System.IO.File.Exists(gameImage))
             {

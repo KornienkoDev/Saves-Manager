@@ -1,11 +1,10 @@
-﻿using System;
+﻿using Microsoft.WindowsAPICodePack.Dialogs;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Windows;
-using System.Windows.Media;
-using Microsoft.WindowsAPICodePack.Dialogs;
 
 namespace SavesManager
 {
@@ -55,7 +54,7 @@ namespace SavesManager
         {
             addGame _add_game_window = new addGame()
             {
-                
+
                 ResizeMode = ResizeMode.NoResize,
                 ShowInTaskbar = false,
                 Owner = this
@@ -136,7 +135,6 @@ namespace SavesManager
                                 UpdateInfo(successfully_saved);
                             }
                             else UpdateInfo(filesAreSynced);
-
                         }
                         else { UpdateInfo(no_save_folder); break; }
                     }
@@ -173,7 +171,6 @@ namespace SavesManager
                                 UpdateInfo(successfully_restored);
                             }
                             else UpdateInfo(filesAreSynced);
-
                         }
                         else { UpdateInfo(no_save_folder); break; }
                     }
@@ -196,19 +193,19 @@ namespace SavesManager
                 target = savesPath + @"\" + selectedGame.gameName;
 
                 if (Directory.Exists(source))
+                {
+                    CopyDirectory(source, target, true);
+
+                    if (thereWasNewFile)
                     {
-                        CopyDirectory(source, target, true);
-
-                        if (thereWasNewFile)
-                        {
-                            Game.games[GamesList_UI.SelectedIndex].dateTime = DateTime.Now.ToString();
-                            GamesList_UI.Items.Refresh();
-                            UpdateInfo(successfully_saved);
-                        }
-
-                        else UpdateInfo(filesAreSynced);
+                        Game.games[GamesList_UI.SelectedIndex].dateTime = DateTime.Now.ToString();
+                        GamesList_UI.Items.Refresh();
+                        UpdateInfo(successfully_saved);
                     }
-                    else UpdateInfo(no_save_folder);
+
+                    else UpdateInfo(filesAreSynced);
+                }
+                else UpdateInfo(no_save_folder);
             }
             else UpdateInfo(choose_game);
 
@@ -227,20 +224,20 @@ namespace SavesManager
                 source = savesPath + @"\" + selectedGame.gameName;
                 target = selectedGame.gamePath;
 
-                    if (Directory.Exists(source))
+                if (Directory.Exists(source))
+                {
+                    CopyDirectory(source, target, true);
+
+                    if (thereWasNewFile)
                     {
-                        CopyDirectory(source, target, true);
-
-                        if (thereWasNewFile)
-                        {
-                            selectedGame.dateTime = DateTime.Now.ToString();
-                            GamesList_UI.Items.Refresh();
-                            UpdateInfo(successfully_restored);
-                        }
-
-                        else UpdateInfo(filesAreSynced);
+                        selectedGame.dateTime = DateTime.Now.ToString();
+                        GamesList_UI.Items.Refresh();
+                        UpdateInfo(successfully_restored);
                     }
-                    else UpdateInfo(no_save_folder);
+
+                    else UpdateInfo(filesAreSynced);
+                }
+                else UpdateInfo(no_save_folder);
             }
             else UpdateInfo(choose_game);
 
@@ -361,14 +358,15 @@ namespace SavesManager
         {
             Game selectedGame = Game.games[GamesList_UI.SelectedIndex];
             String selectedGamePath = selectedGame.gamePath;
-            if (Directory.Exists(selectedGame.gamePath)) {
+            if (Directory.Exists(selectedGame.gamePath))
+            {
                 Process.Start(selectedGamePath);
             }
             else
             {
                 UpdateInfo(no_save_folder);
             }
-            
+
         }
 
         private void EditRecordMenu_Click(object sender, RoutedEventArgs e)

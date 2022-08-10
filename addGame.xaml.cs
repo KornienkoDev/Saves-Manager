@@ -1,9 +1,9 @@
-﻿using System;
+﻿using Microsoft.WindowsAPICodePack.Dialogs;
+using System;
 using System.IO;
 using System.Linq;
 using System.Windows;
 using System.Windows.Media.Imaging;
-using Microsoft.WindowsAPICodePack.Dialogs;
 
 namespace SavesManager
 {
@@ -21,12 +21,12 @@ namespace SavesManager
         public addGame()
         {
             InitializeComponent();
-            image_path = "index-of-assetsimg.png";  
+            image_path = "index-of-assetsimg.png";
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if (gameName_UI.Text != string.Empty & gamePath_UI.Text != string.Empty) 
+            if (gameName_UI.Text != string.Empty & gamePath_UI.Text != string.Empty)
             {
                 if (Game.games.Any(x => x.gameName == gameName_UI.Text))
                 {
@@ -51,7 +51,7 @@ namespace SavesManager
             {
                 Info_UI.Text = enter_game_data;
             }
- 
+
         }
 
         public static string getCurrentDatetime()
@@ -73,7 +73,7 @@ namespace SavesManager
                 }
                 else Info_UI.Text = image_not_found;
             }
-                
+
         }
 
         private void AddGame_Choose_Path_Click(object sender, RoutedEventArgs e)

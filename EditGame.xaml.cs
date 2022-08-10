@@ -1,18 +1,9 @@
 ﻿using Microsoft.WindowsAPICodePack.Dialogs;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace SavesManager
 {
@@ -76,7 +67,7 @@ namespace SavesManager
                 selected_game.gameImage = game_image_path;
             }
 
-            
+
             selected_game.gameName = Edit_GameName_UI.Text;
             selected_game.gamePath = Edit_GamePath_UI.Text;
 
